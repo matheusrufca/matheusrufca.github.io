@@ -1,0 +1,18 @@
+/*
+ * imports for all mixins + global project variables
+ */
+
+@import "modules/all";
+html,
+body {
+	width: 100%;
+	height: 100%;
+	font-size: 10px;
+	color: $text-color-primary;
+}
+
+ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}

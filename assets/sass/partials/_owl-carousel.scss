@@ -1,0 +1,54 @@
+.owl-theme.owl-carousel {
+	.owl-item {
+		opacity: 0.5;
+	}
+	.owl-item.active {
+		opacity: 1;
+	}
+	.owl-nav {
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		width: 100%;
+		text-align: initial;
+		margin-top: 0;
+		[class*=owl-] {
+			background-color: transparentize($black, 0.5);
+			padding: 10px;
+		}
+		.owl-next {
+			float: right
+		}
+	}
+	.owl-dots {
+		position: absolute;
+		float: right;
+		transform: translateY(-100%);
+		right: 0;
+	}
+}
+
+.carousel-container {
+	height: 100%;
+	.owl-carousel-item {
+		height: 100%;
+		color: $white;
+		position: relative;
+	}
+}
+
+.available-content {
+	.carousel-container {
+		.owl-carousel-item {
+			.item-title {
+				position: absolute;
+				width: 100%;
+				bottom: 0;
+				padding: 1rem;
+				text-align: center;
+				font-size: 1.5rem;
+				background-color: transparentize($black, 0.5);
+			}
+		}
+	}
+}

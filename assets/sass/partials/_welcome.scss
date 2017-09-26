@@ -1,0 +1,52 @@
+.container-view.welcome-screen {
+	padding: 10% 10% 0 10%;
+	color: $text-color-primary;
+	background-image: url(../images/welcome_background.jpg);
+	.img-logo {
+		height: 15rem;
+		content: url(../images/logo1.png)
+	}
+	h1.welcome-title {
+		display: inline-block;
+		padding: 3rem;
+		font-size: 7rem; // 70px
+		background-color: $component-bg-color-primary;
+		border-left: 0.1rem solid $primary-color;
+	}
+	h3.welcome-subtitle {
+		font-size: 2.8rem; // 28px;
+	}
+	button.btn.btn-watch-now {
+		width: 45rem;
+		font-size: 3.2rem; //32px;
+		color: $text-color-primary;
+		background-color: $bg-color-secundary;
+		outline: 0.3rem solid $primary-color;
+		outline-offset: 0.5rem;
+		border-radius: 0;
+		&:focus {
+			outline: 0.3rem solid $primary-color;
+			outline-offset: 0.5rem;
+		}
+	}
+	.img-logo,
+	h1.welcome-title,
+	h3.welcome-subtitle {
+		margin-bottom: 6rem;
+	}
+	@extend .bg-cover;
+}
+
+@media only screen and (max-width: 960px) {
+	html {
+		$screen-scale: (960 * 100 / 1920) / 100;
+		font-size: 10px * $screen-scale !important;
+	}
+}
+
+@media only screen and (max-width: 1280px) and (min-width: 961px) {
+	html {
+		$screen-scale: (1280 * 100 / 1920) / 100;
+		font-size: 10px * $screen-scale !important;
+	}
+}

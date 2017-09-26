@@ -1,0 +1,55 @@
+//color naming from: http://chir.ag/projects/name-that-color
+$white: #FFFFFF;
+$black: #000000;
+
+$grey-1: #F0F1F1;
+$grey-2: #E5E6E7;
+$grey-3: #ACADAD;
+$grey-4: #5B5B5B;
+$grey-5: #424242;
+$grey-6: #2D2D2D;
+$grey-7: #1F1F1F;
+
+
+//GREY PALETE
+$black-haze: darken($white, 6); // ~#F0F1F1
+$iron: darken($white, 10); // ~#E5E6E7
+$edward: darken($white, 32); // ~#ACADAD; 
+$scorpion: darken($white, 64); // ~#5B5B5B;
+$tundora: darken($white, 74); // ~#424242
+$mine-shaft: darken($white, 82); // ~#2D2D2D;
+$mine-shaft-dark: darken($white, 88); // ~#1F1F1F;
+
+// PROVIDER COLORS:
+$fuel-yellow: #F0B030;
+$reef-gold: #785818;
+$russet: #A87B21;
+
+
+$red: #e12f3a;
+
+// APPLICATION COLORS:
+$primary-color: $red;
+$secundary-color: $reef-gold;
+$auxiliary-color: $russet;
+
+$text-color-primary: $white;
+$text-color-secundary: $reef-gold;
+$text-color-auxiliary: $russet;
+
+$sidebar-text-color: $primary-color;
+
+$text-color-highlight: $text-color-primary;
+
+$gradient-primary: fn-linear-gradient(bottom, $primary-color, $secundary-color);
+$bg-gradient-primary: bg-linear-gradient(to bottom, $primary-color, $secundary-color);
+
+
+$bg-color-primary: lighten($black, 20); //$mine-shaft
+$bg-color-primary-hover: lighten($bg-color-primary, 20); //$silver-alice
+$bg-color-secundary: $primary-color;
+$bg-color-secundary-hover: lighten($bg-color-secundary, 40);
+$component-bg-color-primary: transparentize($black, 0.5);
+$icon-color-default: $white;
+$loader-bg-color-default: $black;
+$subtitle-color-default: yellow;

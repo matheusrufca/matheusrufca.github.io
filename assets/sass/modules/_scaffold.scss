@@ -1,0 +1,52 @@
+.col-centered {
+    float: none;
+    margin: 0 auto;
+}
+
+.text-ellipsis {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.bg-cover {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+button.btn:focus {
+    outline-color: $primary-color;
+}
+
+.row.no-spacing {
+    margin-right: 0;
+    margin-left: 0;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+html,
+body {
+    height: 100%;
+    .container-fluid,
+    .container-fluid>.row,
+    .container-fluid .container-view {
+        height: 100%;
+    }
+}
+
+#screen-size {
+    position: fixed;
+    top: 0;
+    right: 0;
+    font-size: 2rem;
+    padding: 15px;
+    background-color: $component-bg-color-primary;
+}
