@@ -1,0 +1,28 @@
+version: 2
+
+updates:
+  # Keeps the SHA pins in deploy.yml current. Without this, pinning by SHA means
+  # never getting security fixes — the pin removes the risk of a moved tag, and
+  # Dependabot puts the deliberate upgrade back in.
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: monthly
+    commit-message:
+      prefix: 'ci:'
+
+  - package-ecosystem: npm
+    directory: /
+    schedule:
+      interval: monthly
+    commit-message:
+      prefix: 'deps:'
+    # One PR for the routine bumps, separate PRs for majors. Security advisories
+    # are always raised immediately, regardless of this schedule.
+    groups:
+      dev-dependencies:
+        dependency-type: development
+        update-types: [minor, patch]
+      production:
+        dependency-type: production
+        update-types: [minor, patch]

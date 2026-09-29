@@ -6,6 +6,8 @@ on:
   # Lets you re-deploy from the Actions tab without pushing a commit.
   workflow_dispatch:
 
+# Minimum the deployment needs. `contents` stays read-only: nothing here writes
+# back to the repository.
 permissions:
   contents: read
   pages: write
@@ -17,15 +19,20 @@ concurrency:
   group: pages
   cancel-in-progress: false
 
+# Third-party actions are pinned to commit SHAs, not tags. A tag can be moved to
+# point at new code; a SHA cannot. It matters here because this workflow holds
+# `pages: write`, so a compromised action could publish anything to the live
+# site. Dependabot (.github/dependabot.yml) proposes the bumps, and the trailing
+# comment is what lets it — and you — read the version at a glance.
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
 
-      - uses: pnpm/action-setup@v4
+      - uses: pnpm/action-setup@ea17c68df8912ef543352723c149a84f56e3d413 # v6.1.0
 
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
         with:
           node-version-file: .nvmrc
           cache: pnpm
@@ -44,9 +51,9 @@ jobs:
           NEXT_PUBLIC_SITE_URL: ${{ vars.SITE_URL || format('https://{0}.github.io', github.repository_owner) }}
         run: pnpm build
 
-      - uses: actions/configure-pages@v5
+      - uses: actions/configure-pages@45bfe0192ca1faeb007ade9deae92b16b8254a0d # v6.0.0
 
-      - uses: actions/upload-pages-artifact@v3
+      - uses: actions/upload-pages-artifact@fc324d3547104276b827a68afc52ff2a11cc49c9 # v5.0.0
         with:
           path: out
 
@@ -58,4 +65,4 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - id: deployment
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@368f82528645a54fb793d4d04e342629a3f51346 # v5.0.1
