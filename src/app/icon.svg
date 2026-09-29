@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="MR">
+  <rect width="64" height="64" rx="12" fill="#1a1a1c" />
+  <!-- Monogram drawn as paths rather than <text>, so it renders identically
+       everywhere instead of depending on a font being available. -->
+  <g fill="#e8663f">
+    <!-- M -->
+    <path d="M10 44V20h5.6l6.4 12.4L28.4 20H34v24h-5V29.6l-5.2 10h-3.6l-5.2-10V44z" />
+    <!-- R -->
+    <path d="M38 44V20h10.2c5 0 8.3 2.9 8.3 7.5 0 3.3-1.7 5.7-4.5 6.8L58 44h-6l-5.2-8.6H43V44zm5-13.1h4.6c2.2 0 3.6-1.2 3.6-3.2s-1.4-3.2-3.6-3.2H43z" />
+  </g>
+</svg>

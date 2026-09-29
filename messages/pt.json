@@ -1,0 +1,121 @@
+{
+  "meta": {
+    "title": "Matheus Rufca — Engenheiro Frontend Sênior",
+    "description": "Engenheiro frontend sênior com mais de 15 anos de experiência em React, TypeScript e engenharia frontend moderna. Arquitetura frontend, performance, testes e acessibilidade.",
+    "localeName": "Português"
+  },
+  "nav": {
+    "skipToContent": "Ir para o conteúdo",
+    "switchLanguage": "Trocar idioma"
+  },
+  "hero": {
+    "title": "Engenheiro Frontend Sênior",
+    "summary": "Mais de 15 anos construindo interfaces de produto com React e TypeScript — hoje em fluxos de pagamento e checkout na Disney Streaming. Trabalho com arquitetura frontend, testes e acessibilidade, em web e Smart TV.",
+    "facts": {
+      "experience": {
+        "label": "Anos",
+        "value": "15+"
+      },
+      "location": {
+        "label": "Onde moro",
+        "value": "Salvador, Brasil"
+      },
+      "work": {
+        "label": "Trabalho",
+        "value": "Remoto"
+      },
+      "current": {
+        "label": "Atualmente"
+      }
+    },
+    "cvLabel": "CV",
+    "cvLanguages": {
+      "en": "Inglês",
+      "pt": "Português"
+    }
+  },
+  "sections": {
+    "expertise": "Especialidades",
+    "experience": "Experiência"
+  },
+  "skills": {
+    "groups": [
+      {
+        "title": "Principal",
+        "items": ["TypeScript", "React", "Next.js", "JavaScript", "Node.js"]
+      },
+      {
+        "title": "Arquitetura",
+        "items": [
+          "Arquitetura frontend",
+          "Micro-frontends",
+          "Gerenciamento de estado",
+          "SSR",
+          "BFF",
+          "REST e GraphQL"
+        ]
+      },
+      {
+        "title": "Qualidade",
+        "items": [
+          "Jest",
+          "React Testing Library",
+          "Playwright",
+          "Cypress",
+          "Vitest",
+          "Acessibilidade",
+          "CI/CD"
+        ]
+      },
+      {
+        "title": "Também trabalhei com",
+        "items": ["Angular", "Java / Spring Boot", "Kotlin", ".NET / C#", "Tizen / webOS"]
+      }
+    ]
+  },
+  "experience": {
+    "present": "Atual",
+    "disney": {
+      "role": "Engenheiro Frontend Sênior",
+      "engagement": "Contrato, remoto",
+      "summary": "Fluxos de pagamento, checkout e cobrança dos produtos de streaming da Disney, no time de Transactions & Payments. React e Next.js consumindo um BFF em Node.js, com cobertura de testes em Playwright e Jest."
+    },
+    "fox": {
+      "role": "Engenheiro React Sênior",
+      "engagement": "Contrato, remoto",
+      "summary": "Entrei em um time novo para construir uma aplicação de Smart TV do zero em React e participei da migração de uma aplicação existente de LightningJS. Entreguei a área de configurações, a seleção de canais e componentes compartilhados."
+    },
+    "paypal": {
+      "role": "Engenheiro Fullstack Sênior",
+      "engagement": "Contrato, remoto",
+      "summary": "No time do SDK do PayPal, investigando e resolvendo problemas em produção para manter o SDK confiável para quem o integra."
+    },
+    "pluto": {
+      "role": "Engenheiro Frontend Sênior",
+      "engagement": "Contrato, remoto",
+      "summary": "No time de Samsung Tizen, desenvolvendo funcionalidades de UI e melhorando a acessibilidade de uma aplicação React distribuída para navegadores, Smart TVs, Chromecast e consoles."
+    },
+    "transfix": {
+      "role": "Engenheiro Frontend Sênior",
+      "engagement": "Contrato, remoto",
+      "summary": "Desenvolvimento de funcionalidades e módulos de UI para uma aplicação React integrada a uma API GraphQL."
+    },
+    "sicredi": {
+      "role": "Tech Lead Frontend",
+      "engagement": "CLT, híbrido",
+      "summary": "Liderei o frontend do produto de conta capital: micro-frontends em React, Angular e Salesforce LWC, com serviços REST atrás de uma camada de BFF. Conduzi code reviews, entrevistei candidatos e participei da guilda de frontend."
+    }
+  },
+  "earlier": {
+    "label": "Antes disso",
+    "summary": "Trabalhos com Angular, AngularJS e .NET em times de produto e agências, incluindo aplicações de Smart TV para LG webOS e Samsung Tizen construídas e publicadas do zero."
+  },
+  "education": {
+    "label": "Formação",
+    "degree": "Bacharelado em Ciência da Computação"
+  },
+  "footer": {
+    "cvNote": "Histórico completo e detalhes no CV",
+    "builtWith": "Next.js · GitHub Pages"
+  }
+}

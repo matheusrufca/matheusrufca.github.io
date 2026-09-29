@@ -1,0 +1,121 @@
+{
+  "meta": {
+    "title": "Matheus Rufca — Senior Frontend Engineer",
+    "description": "Senior Frontend Engineer with 15+ years of experience in React, TypeScript and modern frontend engineering. Frontend architecture, performance, testing and accessibility.",
+    "localeName": "English"
+  },
+  "nav": {
+    "skipToContent": "Skip to content",
+    "switchLanguage": "Switch language"
+  },
+  "hero": {
+    "title": "Senior Frontend Engineer",
+    "summary": "15+ years building product interfaces with React and TypeScript — currently payment and checkout flows at Disney Streaming. I work on frontend architecture, testing and accessibility, across web and Smart TV platforms.",
+    "facts": {
+      "experience": {
+        "label": "Years",
+        "value": "15+"
+      },
+      "location": {
+        "label": "Based in",
+        "value": "Salvador, Brazil"
+      },
+      "work": {
+        "label": "Work",
+        "value": "Remote"
+      },
+      "current": {
+        "label": "Currently"
+      }
+    },
+    "cvLabel": "CV",
+    "cvLanguages": {
+      "en": "English",
+      "pt": "Portuguese"
+    }
+  },
+  "sections": {
+    "expertise": "Expertise",
+    "experience": "Experience"
+  },
+  "skills": {
+    "groups": [
+      {
+        "title": "Core",
+        "items": ["TypeScript", "React", "Next.js", "JavaScript", "Node.js"]
+      },
+      {
+        "title": "Architecture",
+        "items": [
+          "Frontend architecture",
+          "Micro-frontends",
+          "State management",
+          "SSR",
+          "BFF",
+          "REST & GraphQL"
+        ]
+      },
+      {
+        "title": "Quality",
+        "items": [
+          "Jest",
+          "React Testing Library",
+          "Playwright",
+          "Cypress",
+          "Vitest",
+          "Accessibility",
+          "CI/CD"
+        ]
+      },
+      {
+        "title": "Also worked with",
+        "items": ["Angular", "Java / Spring Boot", "Kotlin", ".NET / C#", "Tizen / webOS"]
+      }
+    ]
+  },
+  "experience": {
+    "present": "Present",
+    "disney": {
+      "role": "Senior Frontend Engineer",
+      "engagement": "Contract, remote",
+      "summary": "Payment, checkout and billing flows for Disney's streaming products, on the Transactions & Payments team. React and Next.js against a Node.js BFF, with Playwright and Jest coverage."
+    },
+    "fox": {
+      "role": "Senior React Engineer",
+      "engagement": "Contract, remote",
+      "summary": "Joined a new team building a Smart TV application from scratch in React, and contributed to migrating an existing app from LightningJS. Delivered the configuration area, station selection and shared components."
+    },
+    "paypal": {
+      "role": "Senior Fullstack Engineer",
+      "engagement": "Contract, remote",
+      "summary": "On the PayPal SDK team, triaging and resolving production issues to keep the SDK reliable for the developers integrating it."
+    },
+    "pluto": {
+      "role": "Senior Frontend Engineer",
+      "engagement": "Contract, remote",
+      "summary": "On the Samsung Tizen team, building UI features and improving accessibility in a React application shipping to browsers, Smart TVs, Chromecast and consoles."
+    },
+    "transfix": {
+      "role": "Senior Frontend Engineer",
+      "engagement": "Contract, remote",
+      "summary": "Built UI features and modules for a React application backed by a GraphQL API."
+    },
+    "sicredi": {
+      "role": "Frontend Lead",
+      "engagement": "Full-time, hybrid",
+      "summary": "Led frontend for the capital account product: micro-frontends in React, Angular and Salesforce LWC, with REST services behind a BFF layer. Ran code reviews, interviewed engineers and took part in the frontend guild."
+    }
+  },
+  "earlier": {
+    "label": "Earlier",
+    "summary": "Angular, AngularJS and .NET work across product teams and agencies, including Smart TV applications for LG webOS and Samsung Tizen built and published from scratch."
+  },
+  "education": {
+    "label": "Education",
+    "degree": "BSc Computer Science"
+  },
+  "footer": {
+    "cvNote": "Full history and details in the CV",
+    "builtWith": "Next.js · GitHub Pages"
+  }
+}

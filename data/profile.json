@@ -1,0 +1,66 @@
+{
+  "name": "Matheus Rufca",
+  "email": "matheus.rufca@gmail.com",
+  "links": {
+    "linkedin": "https://www.linkedin.com/in/matheus-rufca/",
+    "github": "https://github.com/matheusrufca"
+  },
+  "cv": {
+    "en": "/cv/matheus-rufca-cv-en.pdf",
+    "pt": "/cv/matheus-rufca-cv-pt.pdf"
+  },
+  "education": {
+    "institution": "PUCRS",
+    "from": "2009",
+    "to": "2015"
+  },
+  "experience": [
+    {
+      "id": "disney",
+      "company": "Disney Streaming",
+      "from": "2025",
+      "to": null,
+      "stack": ["React", "Next.js", "TypeScript", "Node.js", "Playwright", "Jest"]
+    },
+    {
+      "id": "fox",
+      "company": "Fox Corp",
+      "from": "2025",
+      "to": "2025",
+      "stack": ["React", "TypeScript", "Zustand", "Vitest"]
+    },
+    {
+      "id": "paypal",
+      "company": "PayPal",
+      "from": "2024",
+      "to": "2025",
+      "stack": ["React", "TypeScript", "Node.js", "JavaScript"]
+    },
+    {
+      "id": "pluto",
+      "company": "Pluto TV · Paramount",
+      "from": "2023",
+      "to": "2024",
+      "stack": ["React", "Redux", "TypeScript", "Tizen", "Jest"]
+    },
+    {
+      "id": "transfix",
+      "company": "Transfix.io",
+      "from": "2022",
+      "to": "2023",
+      "stack": ["React", "Apollo GraphQL", "Jest"]
+    },
+    {
+      "id": "sicredi",
+      "company": "Sicredi",
+      "from": "2019",
+      "to": "2022",
+      "stack": ["React", "Angular", "TypeScript", "Node.js", "Java", "Salesforce LWC"]
+    }
+  ],
+  "earlier": {
+    "from": "2010",
+    "to": "2019",
+    "companies": ["SAP", "DBServer", "Portotech", "DevelopIT", "Construtiva"]
+  }
+}

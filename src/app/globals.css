@@ -1,0 +1,191 @@
+@import 'tailwindcss';
+
+/* ---------------------------------------------------------------------------
+   Design tokens
+
+   One neutral ramp, one warm accent, two type families (sans + mono).
+   Re-skinning the site means editing this block only.
+   --------------------------------------------------------------------------- */
+
+:root {
+  --paper: oklch(98.8% 0.003 80);
+  --paper-raised: oklch(100% 0 0);
+  --ink: oklch(20% 0.008 260);
+  --ink-soft: oklch(43% 0.011 260);
+  --ink-faint: oklch(57% 0.01 260);
+  --line: oklch(91% 0.005 260);
+  --line-strong: oklch(82% 0.008 260);
+  --accent: oklch(52% 0.15 38);
+  --accent-soft: oklch(95% 0.025 45);
+  --selection: oklch(90% 0.06 45);
+
+  color-scheme: light;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --paper: oklch(16.5% 0.008 265);
+    --paper-raised: oklch(20.5% 0.009 265);
+    --ink: oklch(94.5% 0.003 80);
+    --ink-soft: oklch(73% 0.008 265);
+    --ink-faint: oklch(58% 0.01 265);
+    --line: oklch(27% 0.01 265);
+    --line-strong: oklch(36% 0.012 265);
+    --accent: oklch(74% 0.13 45);
+    --accent-soft: oklch(26% 0.045 45);
+    --selection: oklch(34% 0.08 45);
+
+    color-scheme: dark;
+  }
+}
+
+@theme inline {
+  --color-paper: var(--paper);
+  --color-paper-raised: var(--paper-raised);
+  --color-ink: var(--ink);
+  --color-ink-soft: var(--ink-soft);
+  --color-ink-faint: var(--ink-faint);
+  --color-line: var(--line);
+  --color-line-strong: var(--line-strong);
+  --color-accent: var(--accent);
+  --color-accent-soft: var(--accent-soft);
+
+  --font-sans: var(--font-sans-var), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-mono-var), ui-monospace, 'SF Mono', monospace;
+
+  /* The name is the largest thing on the page, and it stops well short of
+     display size — this is a document, not a poster. */
+  --text-name: clamp(2rem, 4vw, 2.875rem);
+  --text-name--line-height: 1.05;
+  --text-name--letter-spacing: -0.025em;
+
+  --text-heading: clamp(1.25rem, 2vw, 1.5rem);
+  --text-heading--line-height: 1.2;
+  --text-heading--letter-spacing: -0.015em;
+
+  --text-lead: 1.0625rem;
+  --text-lead--line-height: 1.65;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 5rem;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    background-color: var(--paper);
+    color: var(--ink);
+    font-family: var(--font-sans);
+    font-synthesis-weight: none;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  ::selection {
+    background-color: var(--selection);
+  }
+
+  /* One focus treatment everywhere. */
+  :focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    *,
+    *::before,
+    *::after {
+      transition-duration: 0.01ms !important;
+      animation-duration: 0.01ms !important;
+    }
+  }
+}
+
+/* ---------------------------------------------------------------------------
+   Signature details — three, deliberately
+   --------------------------------------------------------------------------- */
+
+/* Small mono label for section headings and metadata. */
+@utility label {
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+}
+
+/* A faint measure grid behind the intro, faded out so it never competes with
+   the type. Purely decorative. */
+@utility grid-field {
+  background-image:
+    linear-gradient(to right, var(--line) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--line) 1px, transparent 1px);
+  background-size: 64px 64px;
+  mask-image: radial-gradient(120% 80% at 10% 0%, black 0%, transparent 70%);
+}
+
+/* Underline that draws itself in on hover. */
+@utility link-underline {
+  position: relative;
+  text-decoration: none;
+
+  &::after {
+    content: '';
+    position: absolute;
+    inset-inline: 0;
+    bottom: -2px;
+    height: 1px;
+    background-color: currentColor;
+    transform: scaleX(var(--underline-scale, 0));
+    transform-origin: left;
+    transition: transform 320ms cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  &:hover::after,
+  &:focus-visible::after {
+    --underline-scale: 1;
+  }
+}
+
+/* Scroll reveal.
+   Elements start hidden only where scripting can reveal them again. `scripting:
+   enabled` is what makes this safe *and* hydration-clean: the alternative — an
+   inline script adding a class to <html> — changes the DOM before React
+   hydrates and triggers a mismatch on the very element it edits.
+
+   A browser without support for the query ignores the whole block, so content
+   is visible from first paint. Same outcome when JavaScript is off. */
+@layer components {
+  [data-reveal] {
+    opacity: 1;
+  }
+
+  @media (scripting: enabled) {
+    [data-reveal] {
+      opacity: 0;
+      transform: translateY(10px);
+      transition:
+        opacity 560ms cubic-bezier(0.22, 1, 0.36, 1),
+        transform 560ms cubic-bezier(0.22, 1, 0.36, 1);
+      transition-delay: var(--reveal-delay, 0ms);
+    }
+
+    [data-reveal][data-revealed='true'] {
+      opacity: 1;
+      transform: none;
+    }
+  }
+
+  /* Must stay last: same specificity, so it wins by order. */
+  @media (prefers-reduced-motion: reduce) {
+    [data-reveal] {
+      opacity: 1;
+      transform: none;
+    }
+  }
+}
